@@ -1,32 +1,32 @@
-"use client";
-import React from "react";
-import dynamic from "next/dynamic";
+'use client';
+import React from 'react';
+import dynamic from 'next/dynamic';
 
 const AnimatedNumbers = dynamic(
   () => {
-    return import("react-animated-numbers");
+    return import('react-animated-numbers');
   },
   { ssr: false }
 );
 
 const achievementsList = [
   {
-    metric: "Projects",
-    value: "100",
-    postfix: "+",
+    metric: 'Projects',
+    value: '100',
+    postfix: '+',
   },
   {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
+    prefix: '~',
+    metric: 'Users',
+    value: '100,000',
   },
   {
-    metric: "Awards",
-    value: "7",
+    metric: 'Awards',
+    value: '7',
   },
   {
-    metric: "Years",
-    value: "5",
+    metric: 'Years',
+    value: '5',
   },
 ];
 

@@ -1,15 +1,15 @@
 'use client';
 import React, { useState, useRef } from 'react';
-import ProjectCard from './ProjectCard';
+import ExperienceCard from './ExperiencesCard';
 import { motion, useInView } from 'framer-motion';
 
-const projectsData = [
+const ExperiencesData = [
   {
     id: 1,
     title: 'Schooper',
     description:
       'A web application using AI to fetch course outlines, auto-populate your academic schedule, calculate grades, and manage course information and deadlines seamlessly.',
-    image: '/images/projects/Schooper.png',
+    image: '/images/Experiences/Schooper.png',
     tag: ['All', 'Web'],
     gitUrl: 'https://github.com/hassanalawie/getAround',
     previewUrl:
@@ -20,7 +20,7 @@ const projectsData = [
     title: 'Get Around',
     description:
       'An iOS app designed to provide guidance on wheelchair-accessible entrances at the University of Waterloo.',
-    image: '/images/projects/getAround.png',
+    image: '/images/Experiences/getAround.png',
     tag: ['All', 'Web'],
     gitUrl: 'https://github.com/hassanalawie/getAround',
     previewUrl:
@@ -31,7 +31,7 @@ const projectsData = [
     title: 'Out of the Groupchat',
     description:
       'A user-friendly web application that simplifies event planning by allowing participants to vote and indicate their availability based on your provided options.',
-    image: '/images/projects/OOTGC.png',
+    image: '/images/Experiences/OOTGC.png',
     tag: ['All', 'Web'],
     gitUrl: 'https://github.com/MatthewZhang7/OOTGCcore',
     previewUrl:
@@ -41,14 +41,14 @@ const projectsData = [
     id: 4,
     title: 'BeatsByZhang',
     description: 'Personal website to showcase and sell beats to artists',
-    image: '/images/projects/BeatsbyZhang.png',
+    image: '/images/Experiences/BeatsbyZhang.png',
     tag: ['All', 'Web'],
     gitUrl: 'https://github.com/MatthewZhang7/beatsbyzhang',
     previewUrl: 'https://sage-empanada-6c980f.netlify.app/',
   },
 ];
 
-const ProjectsSection = () => {
+const ExperiencesSection = () => {
   const [tag, setTag] = useState('All');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -57,8 +57,8 @@ const ProjectsSection = () => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter(project =>
-    project.tag.includes(tag)
+  const filteredExperiences = ExperiencesData.filter(Experience =>
+    Experience.tag.includes(tag)
   );
 
   const cardVariants = {
@@ -67,12 +67,12 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <section id="Experiences">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+        My Experiences
       </h2>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+        {filteredExperiences.map((Experience, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
@@ -80,13 +80,13 @@ const ProjectsSection = () => {
             animate={isInView ? 'animate' : 'initial'}
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
+            <ExperienceCard
+              key={Experience.id}
+              title={Experience.title}
+              description={Experience.description}
+              imgUrl={Experience.image}
+              gitUrl={Experience.gitUrl}
+              previewUrl={Experience.previewUrl}
             />
           </motion.li>
         ))}
@@ -95,4 +95,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default ExperiencesSection;
