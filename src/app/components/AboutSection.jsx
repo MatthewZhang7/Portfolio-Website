@@ -13,8 +13,8 @@ const AboutSection = () => {
             Hey! I'm Matthew and I'm a Systems Design Engineering student at the
             University of Waterloo. I'm also an aspiring software engineer who
             loves building cool things and exploring new technologies. I've
-            previously interned at University Health Network, Purolator,
-            AlertDriving, Opentext, and TrustiiN.
+            previously interned at Empire Life, University Health Network,
+            Purolator, AlertDriving, Opentext, and TrustiiN.
           </p>
           <br></br>
           <p className="text-base lg:text-lg">
@@ -32,9 +32,9 @@ const AboutSection = () => {
           </p>
           <br></br>
           <p className="text-base lg:text-lg">
-            I’m currently exploring Summer 2024 internship opportunities related
-            to Software Development (Front-end/Full-stack). Please feel free to
-            reach out-—I'm always up for a chat and connecting with new people!
+            I’m currently exploring 2025 new grad opportunities related to
+            Software Development (Front-end/Full-stack). Please feel free to
+            reach out, I'm always up for a chat and connecting with new people!
           </p>
         </div>
       </div>

@@ -6,6 +6,17 @@ import { motion, useInView } from 'framer-motion';
 const projectsData = [
   {
     id: 1,
+    title:
+      'Machine Learning in Sports Betting: Money Line Predictions for NBA Games',
+    description:
+      'This project aims to predict the outcome of an NBA game using 5 different dataframes and 4 different models. Feel free to navigate through our project to see our process :)',
+    image: '/images/projects/MachineLearning.png',
+    tag: ['All', 'Web'],
+    gitUrl: 'https://github.com/parminpatel28/MSCI-446-Project',
+    previewUrl: 'https://github.com/parminpatel28/MSCI-446-Project',
+  },
+  {
+    id: 2,
     title: 'Schooper',
     description:
       'A web application using AI to fetch course outlines, auto-populate your academic schedule, calculate grades, and manage course information and deadlines seamlessly.',
@@ -16,7 +27,7 @@ const projectsData = [
       'https://www.figma.com/file/WHTROVWO1lRX68bYkY5jYi/Schooper?type=design&node-id=0-1&mode=design&t=f3cF4yfOlrVaheDR-0',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Get Around',
     description:
       'An iOS app designed to provide guidance on wheelchair-accessible entrances at the University of Waterloo.',
@@ -27,7 +38,7 @@ const projectsData = [
       'https://www.figma.com/file/mXydxDIb3M75czj8W5S9GD/GetAround?type=design&t=W3geRR2Vx1tqnVIt-0',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Out of the Groupchat',
     description:
       'A user-friendly web application that simplifies event planning by allowing participants to vote and indicate their availability based on your provided options.',
@@ -38,7 +49,7 @@ const projectsData = [
       'https://www.figma.com/file/sOLxYaAi3CVvV4KMPp4EA6/OOTGC-Website-Flow?type=design&node-id=0-1&t=W3geRR2Vx1tqnVIt-0',
   },
   {
-    id: 4,
+    id: 5,
     title: 'BeatsByZhang',
     description: 'Personal website to showcase and sell beats to artists',
     image: '/images/projects/BeatsbyZhang.png',

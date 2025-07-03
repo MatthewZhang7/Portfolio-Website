@@ -6,60 +6,47 @@ import { motion, useInView } from 'framer-motion';
 const ExperiencesData = [
   {
     id: 1,
-    title: 'Schooper',
-    description:
-      'A web application using AI to fetch course outlines, auto-populate your academic schedule, calculate grades, and manage course information and deadlines seamlessly.',
-    image: '/images/Experiences/Schooper.png',
-    tag: ['All', 'Web'],
-    gitUrl: 'https://github.com/hassanalawie/getAround',
-    previewUrl:
-      'https://www.figma.com/file/WHTROVWO1lRX68bYkY5jYi/Schooper?type=design&node-id=0-1&mode=design&t=f3cF4yfOlrVaheDR-0',
+    title: 'Empire Life',
+    description: 'May 2024 - August 2024: Software Developer Intern',
+    image: '/images/work/empirelife.png',
   },
   {
     id: 2,
-    title: 'Get Around',
-    description:
-      'An iOS app designed to provide guidance on wheelchair-accessible entrances at the University of Waterloo.',
-    image: '/images/Experiences/getAround.png',
-    tag: ['All', 'Web'],
-    gitUrl: 'https://github.com/hassanalawie/getAround',
-    previewUrl:
-      'https://www.figma.com/file/mXydxDIb3M75czj8W5S9GD/GetAround?type=design&t=W3geRR2Vx1tqnVIt-0',
+    title: 'University Health Network',
+    description: 'Sep 2023 - Dec 2023: Frontend Developer Intern',
+    image: '/images/work/uhn.jpg',
   },
   {
     id: 3,
-    title: 'Out of the Groupchat',
-    description:
-      'A user-friendly web application that simplifies event planning by allowing participants to vote and indicate their availability based on your provided options.',
-    image: '/images/Experiences/OOTGC.png',
-    tag: ['All', 'Web'],
-    gitUrl: 'https://github.com/MatthewZhang7/OOTGCcore',
-    previewUrl:
-      'https://www.figma.com/file/sOLxYaAi3CVvV4KMPp4EA6/OOTGC-Website-Flow?type=design&node-id=0-1&t=W3geRR2Vx1tqnVIt-0',
+    title: 'Purolator',
+    description: 'Jan 2023 - April 2023: Frontend Developer Intern',
+    image: '/images/work/purolator.png',
   },
   {
     id: 4,
-    title: 'BeatsByZhang',
-    description: 'Personal website to showcase and sell beats to artists',
-    image: '/images/Experiences/BeatsbyZhang.png',
-    tag: ['All', 'Web'],
-    gitUrl: 'https://github.com/MatthewZhang7/beatsbyzhang',
-    previewUrl: 'https://sage-empanada-6c980f.netlify.app/',
+    title: 'AlertDriving',
+    description: 'May 2022 - May 2022: Software Engineer Intern',
+    image: '/images/work/alertdriving.jpg',
+  },
+  {
+    id: 5,
+    title: 'OpenText',
+    description:
+      'Sep 2021 - Dec 2021: Software Quality Assurance Specialist Intern',
+    image: '/images/work/opentext.png',
+  },
+  {
+    id: 6,
+    title: 'TRUSTiiN',
+    description:
+      'Jan 2021 - April 2021: Junior Test Automation Developer Intern',
+    image: '/images/work/trustiin.png',
   },
 ];
 
 const ExperiencesSection = () => {
-  const [tag, setTag] = useState('All');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  const handleTagChange = newTag => {
-    setTag(newTag);
-  };
-
-  const filteredExperiences = ExperiencesData.filter(Experience =>
-    Experience.tag.includes(tag)
-  );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -72,7 +59,7 @@ const ExperiencesSection = () => {
         My Experiences
       </h2>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredExperiences.map((Experience, index) => (
+        {ExperiencesData.map((Experience, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
@@ -85,8 +72,6 @@ const ExperiencesSection = () => {
               title={Experience.title}
               description={Experience.description}
               imgUrl={Experience.image}
-              gitUrl={Experience.gitUrl}
-              previewUrl={Experience.previewUrl}
             />
           </motion.li>
         ))}
